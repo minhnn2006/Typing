@@ -1,0 +1,59 @@
+p {
+    color:black;
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+    margin: 1rem 0 0 0;
+}
+#Type{
+    text-align: center;
+    margin: 3rem 0 0 27.8rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+#Score{
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+#Timer{
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+#Restart{
+  margin: 1rem 0 0 32rem;
+}
+.Keyboard {
+    display: flex;
+    flex-direction: column;
+  }
+  .row-0{
+    list-style: none;
+    display: flex;
+  }
+  .row-1{
+    list-style: none;
+    display: flex;
+  }
+  .row-2{
+    list-style: none;
+    display: flex;
+  }
+  .row-3{
+    list-style: none;
+    display: flex;
+  }
+  li {
+    height: 2em;
+    width: 4em;
+    
+    align-items: center;
+    color: black;
+    line-height: 2em;
+    margin: 0 0 0 1rem;
+    text-align: center;
+    font-size: 0.7rem;
+    border-color: black;
+    border-style: solid;
+  }
