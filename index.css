@@ -7,7 +7,7 @@ p {
 }
 #Type{
     text-align: center;
-    margin: 3rem 0 0 27.8rem;
+    margin: 3rem 0 0 27rem;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -15,14 +15,14 @@ p {
 }
 #Score{
     text-align: center;
-    margin: 3rem 0 0 0;
+    margin: 1rem 0 0 0;
 }
 #Timer{
     text-align: center;
-    margin: 3rem 0 0 0;
+    margin: 1rem 0 0 0;
 }
 #Restart{
-  margin: 1rem 0 0 32rem;
+  margin: 0.5rem 0 0 30.7rem;
 }
 .Keyboard {
     display: flex;

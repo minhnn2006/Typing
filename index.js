@@ -19,6 +19,7 @@ function loop() {
     currentWord.innerHTML = randomWord;
     wordType.value = "";
     time.innerHTML = "Time: " + time;
+    time = time - 1;
     reTime();
 
 }
@@ -26,7 +27,7 @@ let remainingTimer = setInterval(function reTime(){
     if(time <= 0){
       //clearInterval(remainingTimer);
       document.getElementById("Timer").innerHTML = "Time over";
-
+     
     } else {
       document.getElementById("Timer").innerHTML = time + " seconds remaining";
     }
