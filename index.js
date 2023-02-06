@@ -1,8 +1,9 @@
-
+let score = 0;
+let time = 10;
 let wordType = document.getElementById('Type');
 let currentWord = document.getElementById('Word');
-let score = 0 = document.getElementById('Score');
-let time = 10 = document.getElementById('Timer');
+let score = document.getElementById('Score');
+let time = document.getElementById('Timer');
 let randomWord = words[Math.floor(Math.random() * words.length)];
 let words = ['shirt','protein','laptop','it','tennis','runaway','he','developer','she',
   ];
@@ -22,7 +23,6 @@ function loop()
 }
 wordType.addEventListener("Type", ({key}) => { 
     if (key === "Enter") {
-        // Do work
         if(wordType.value === randomWord) {
             score++;
 			loop();
