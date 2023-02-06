@@ -2,47 +2,54 @@ let score = 0;
 let time = 10;
 let wordType = document.getElementById('Type');
 let currentWord = document.getElementById('Word');
-let score = document.getElementById('Score');
-let time = document.getElementById('Timer');
+let scoreDiv = document.getElementById('Score');
+scoreDiv.innerHTML = "Score: " + score;
+let timeDiv = document.getElementById('Timer');
+timeDiv.innerHTML = "Time left: " + time;
+let words = ['shirt', 'protein', 'laptop', 'it', 'tennis', 'runaway', 'he', 'hit', 'she', 'he'];
 let randomWord = words[Math.floor(Math.random() * words.length)];
-let words = ['shirt','protein','laptop','it','tennis','runaway','he','developer','she',
-  ];
 let restartBtn = document.getElementById('Restart');
-let CountDown = setInterval(timer,1000)
 currentWord.innerHTML = randomWord;
 console.log(wordType);
-function loop()
-{
+
+
+function loop() {
     score.innerHTML = "Score: " + score;
     randomWord = words[Math.floor(Math.random() * words.length)];
     currentWord.innerHTML = randomWord
     wordType.value = "";
-    CountDown;
-    time = 10;
-    return CountDown;
+    remainingTimer;
+    return remainingTimer;
 }
-wordType.addEventListener("Type", ({key}) => { 
-    if (key === "Enter") {
-        if(wordType.value === randomWord) {
-            score++;
-			loop();
-        }
-        else{
-            loop();
-        }
+let remainingTimer = setInterval(function(){
+    if(time <= 0){
+      clearInterval(remainingTimer);
+      document.getElementById("Timer").innerHTML = "Time over";
+    } else {
+      document.getElementById("Timer").innerHTML = time + " seconds remaining";
     }
-})
-function timer(){
-    time--;
-    time.innerHTML= "Time left: " + time;
-    if (time = 0){
-        
-		loop();
-    }
- }
-restartBtn.addEventListener('click',restart)
-function Restart()
-{
+    time =time - 1;
+  }, 1000);
+  
+restartBtn.addEventListener('click', Restart)
+function Restart() {
     score = 0;
     loop();
 }
+
+    $("#pass").keypress(function(event) {
+        if (event.keyCode === 13) {
+            $("#btnEnter").click();
+        }
+    });
+      
+    $("#btnEnter").click(function() {
+                    if (wordType.value === randomWord) {
+                        score++;
+                        loop();
+                    }
+                    else {
+                        loop();
+                    }
+                }
+    );
