@@ -16,40 +16,28 @@ console.log(wordType);
 function loop() {
     score.innerHTML = "Score: " + score;
     randomWord = words[Math.floor(Math.random() * words.length)];
-    currentWord.innerHTML = randomWord
+    currentWord.innerHTML = randomWord;
     wordType.value = "";
-    remainingTimer;
-    return remainingTimer;
+    time.innerHTML = "Time: " + time;
+    reTime();
+
 }
-let remainingTimer = setInterval(function(){
+let remainingTimer = setInterval(function reTime(){
     if(time <= 0){
-      clearInterval(remainingTimer);
+      //clearInterval(remainingTimer);
       document.getElementById("Timer").innerHTML = "Time over";
+
     } else {
       document.getElementById("Timer").innerHTML = time + " seconds remaining";
     }
     time =time - 1;
+    
   }, 1000);
   
 restartBtn.addEventListener('click', Restart)
 function Restart() {
     score = 0;
     loop();
+    reTime(time);
 }
 
-    $("#pass").keypress(function(event) {
-        if (event.keyCode === 13) {
-            $("#btnEnter").click();
-        }
-    });
-      
-    $("#btnEnter").click(function() {
-                    if (wordType.value === randomWord) {
-                        score++;
-                        loop();
-                    }
-                    else {
-                        loop();
-                    }
-                }
-    );
