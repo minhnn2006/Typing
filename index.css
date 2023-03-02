@@ -25,29 +25,37 @@ p {
   margin: 0.5rem 0 0 30.7rem;
 }
 .Keyboard {
-    display: flex;
-    flex-direction: column;
+    margin-top: 1em;
+    border-radius: 5px;
   }
   .row-0{
     list-style: none;
     display: flex;
+    justify-content: center;
+    border-radius: 5px;
   }
   .row-1{
     list-style: none;
     display: flex;
+    justify-content: center;
+    border-radius: 5px;
   }
   .row-2{
     list-style: none;
     display: flex;
+    justify-content: center;
+    border-radius: 5px;
   }
   .row-3{
     list-style: none;
     display: flex;
+    justify-content: center;
+    border-radius: 5px;
   }
   li {
     height: 2em;
     width: 4em;
-    
+    border-radius: 5px;
     align-items: center;
     color: black;
     line-height: 2em;
